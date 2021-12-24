@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <link rel="stylesheet" href="./css/comp.css">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Uploading</title>
+    <style> 
+        div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  
+}
+        div.raja{  
+          font-family: Calibri, Helvetica, sans-serif;  
+          background-color: pink;  
+        }  
+        .container {  
+            padding: 50px;  
+          background-color: lightblue;  
+        }  
+          
+        input[type=text], input[type=password], textarea {  
+          width: 100%;  
+          padding: 15px;  
+          margin: 5px 0 22px 0;  
+          display: inline-block;  
+          border: none;  
+          background: #f1f1f1;  
+        }  
+        input[type=text]:focus, input[type=password]:focus {  
+          background-color: orange;  
+          outline: none;  
+        }  
+         div {  
+                    padding: 10px 0;  
+                 }  
+        hr {  
+          border: 1px solid #f1f1f1;  
+          margin-bottom: 25px;  
+        }  
+        .registerbtn {  
+  background-color: #4CAF50;  
+  color: white;  
+  padding: 16px 20px;  
+  margin: 8px 0;  
+  border: none;  
+  cursor: pointer;  
+  width: 100%;  
+  opacity: 0.9;  
+}  
+.registerbtn:hover {  
+  opacity: 1;  
+}  
+        </style>
+</head>
+ 
+<body>
+    <div class="sticky">
+    <nav>
+        <div class="logo">
+          Photo Stuff
+        </div>
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+        </label>
+        <div class="sticky">
+        <ul>
+           <li><a href="/profile"><span class="material-icons">home</span>Home</a></li>
+           <li><a href="/home"><span class="material-icons">camera_rear</span>Camera</a></li>
+           <li><a href="/imagesPage"><span class="material-icons">upload</span>Upload Photo</a></li>
+           <li><a href="#gallery"><span class="material-icons">collections</span>Gallery</a></li>
+            <li><a href="/logout"><span class="material-icons">logout</span>Logout</a></li>
+        </ul>
+     </nav>
+     </div>
+    <hr>
+    <div class="raja">
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <div class="container">  
+                <center><h1>Upload your Image</h1></center>
+            <div>
+                <label for="username">User Name</label>
+                <input type="text" id="username" placeholder="username" value="" name="username" required>
+            </div>
+            <div>
+                <label for="name">Image Title</label>
+                <input type="text" id="name" placeholder="Name"
+                       value="" name="name" required>
+            </div>
+            <div>
+                <label for="desc">Image Description</label>
+                <textarea id="desc" name="desc" value="" rows="2"
+                          placeholder="Description" required>
+                </textarea>
+            </div>
+            <div>
+                <label for="image">Upload Image</label>
+                <input type="file" id="image"
+                       name="image" value="" required>
+            </div>
+            <div>
+                <button type="submit" class="registerbtn">Upload</button>
+            </div>
+            </div>
+        </form>
+    </div>
+ 
+    <hr>
+ 
+
+</body>
+ 
+</html>
